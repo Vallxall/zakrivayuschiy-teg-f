@@ -1,23 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root{
-  --background-image:
-repeating-linear-gradient(
-    to right, 
-    #000 0%, 
-    #000 2px, 
-    transparent 2px, 
-    transparent 4px
-),
-repeating-linear-gradient(
-  to bottom, 
-    #000 0%, 
-    #000 2px, 
-    transparent 2px, 
-    transparent 4px
-), 
-linear-gradient(
-    to bottom, 
-    #007f0c, 
-    #004306
-);
+  --background-image: repeating-linear-gradient(to right, #000 0%, #000 2px, transparent 2px, transparent 4px),repeating-linear-gradient(to bottom, #000 0%, #000 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #007f0c, #004306);
+
+--accent-color: #00CC14;
+--font-family-inter: 'Inter', sans-serif;
+--font-family-pressstart2p: 'PressStart2P', cursive;
+--font-weight-main: 465;
+--font-weight-title: 785;
 }

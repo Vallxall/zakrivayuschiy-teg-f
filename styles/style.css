@@ -20,4 +20,17 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
+  color: var(--accent-color);
+  font-family: var(--font-family-pressstart2p);
+  font-variation-settings:var(--font-weight-main);
+  font-size: 18px;
+  line-height: 21px;
 }
+
+h2{
+  font-variation-settings:var(--font-weight-title);
+}
+
+ 
+/* коммит для accent-color и шрифты  
+font-display: swap; чтобы загружался сначала запасной шрифт*/
