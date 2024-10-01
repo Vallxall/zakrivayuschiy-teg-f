@@ -1,10 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root{
   --background-image: repeating-linear-gradient(to right, #000 0%, #000 2px, transparent 2px, transparent 4px),repeating-linear-gradient(to bottom, #000 0%, #000 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #007f0c, #004306);
-
+--background-color: #000000;
 --accent-color: #00CC14;
 --font-family-inter: 'Inter', sans-serif;
 --font-family-pressstart2p: 'PressStart2P', cursive;
 --font-weight-main: 465;
 --font-weight-title: 785;
+--header-width: clamp(450px, 50vw, 700px);
+--title-logo-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+--title-teg-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
