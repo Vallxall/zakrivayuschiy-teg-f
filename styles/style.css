@@ -34,8 +34,9 @@ font-display: swap; чтобы загружался сначала запасн�
 
 .header{
   text-transform: uppercase;
-  text-align: center;
-  gap: 25px;
+  display: grid;
+  justify-content: center;
+
   padding-block-end: 25px;
   margin: auto;
   width: var(--header-width);
@@ -56,8 +57,14 @@ font-display: swap; чтобы загружался сначала запасн�
   }
 }
 
+.title-logo, .title-tag {
+  display: grid;
+  justify-content: center;
+}
 
 .header-title{
+  display: grid;
+  gap: 20px;
   margin-block-start: 136px;
 }
 
@@ -67,4 +74,37 @@ font-display: swap; чтобы загружался сначала запасн�
 
 .title-tag{
   font-size: var(--title-teg-size);
+}
+
+/* header button */
+
+.theme-menu{
+  display: grid;
+  justify-content: center;
+  padding-inline-start: 28px;
+}
+
+@media (width <= 375px) {
+  .theme-menu{
+    padding-inline-start: 31px;
+  }
+}
+
+.theme-menu__list{
+  margin-block-start: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.theme-menu__button{
+  position: relative;
+  margin-inline: 0 10px;
+  text-transform: uppercase;
+  background: none;
+  border: transparent;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
 }
