@@ -7,7 +7,7 @@
 --font-family-pressstart2p: 'PressStart2P', cursive;
 --font-weight-main: 465;
 --font-weight-title: 786;
---header-width: clamp(450px, 50vw, 700px);
---title-logo-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
---title-teg-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+--header-width: clamp(375px, 50vw, 700px);
+--title-logo-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+--title-teg-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
