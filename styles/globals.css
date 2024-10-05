@@ -34,7 +34,7 @@ button,
 input {
   color: currentColor;
   font-family: inherit;
-  font-size: 14px;
+  font-size: inherit;
 }
 
 ul,

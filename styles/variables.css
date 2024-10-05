@@ -5,9 +5,10 @@
 --accent-color: #00CC14;
 --font-family-inter: 'Inter', sans-serif;
 --font-family-pressstart2p: 'PressStart2P', cursive;
+--normal-Weight: 400;
 --font-weight-main: 465;
 --font-weight-title: 786;
---header-width: clamp(375px, 50vw, 700px);
+--block-width: clamp(375px, 50vw, 700px);
 --title-logo-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 --title-teg-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
