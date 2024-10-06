@@ -194,19 +194,16 @@ font-display: swap; чтобы загружался сначала запасн�
   
 }
 
-.card-images {
-  position: relative;
-}
-
+ /*правильно-ли тут задавать aspect-ratio: 1 / 1; ?  */
 .image-wrapper {
   position: relative;
+  aspect-ratio: 1 / 1; 
 }
-
 
 .card-images img {
   position: relative;
   width: 100%;
-  height: 100%;
+  object-position: center;
   object-fit: cover;
   border: 2px solid var(--accent-color);
 }
@@ -220,17 +217,17 @@ font-display: swap; чтобы загружался сначала запасн�
   font-weight: 400;
   color: var(--accent-color); 
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 #000000, 
-      0 1px #000000, 
-      1px 0 #000000, 
-      0 -1px #000000; 
+  text-shadow: -1px 0 var(--background-color), 
+      0 1px var(--background-color), 
+      1px 0 var(--background-color), 
+      0 -1px var(--background-color); 
 }
 
-@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
-  .label {
-    -webkit-text-stroke: 1px #000000;
-    text-stroke: 1px #000000;
-    text-shadow: none;
+@supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+  label {
+      -webkit-text-stroke: 1px var(--background-color);
+      text-stroke: 1px var(--background-color);
+      text-shadow: none;
   }
 }
 
@@ -249,7 +246,110 @@ font-display: swap; чтобы загружался сначала запасн�
   font-weight: var(--font-weight-main);
   line-height: 21px;
   border-left: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
   border-right: 2px solid var(--accent-color);
   padding-block-start: 25px;
+  padding-block-end: 25px;
 } 
+
+.like-button{
+  border-right: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  display: grid;
+  justify-content: end;
+  padding-inline: 19px;
+  font-size: 14px;
+  padding-block-end: 25px;
+}
+
+.card__like-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: transparent;
+  background: none;
+}
+
+.like-text{
+  border: 2px solid var(--accent-color);
+  padding: 9px 35px;
+}
+
+/* сердцe */
+
+.like-icon {
+  position: relative;
+}
+
+.like-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('heart-yellow.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.like-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('heart-orange.svg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.like-icon:hover {
+  fill: inherit;
+  animation: hover-effect 2s ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hover-effect {
+  0% {
+    fill: black;
+  }
+  50% {
+    fill: url(#heart-hover);
+    opacity: 1;
+  }
+  100% {
+    fill: url(#heart-senter);
+    opacity: 1;
+  }
+}
+
+/* .like-icon{
+  transition: fill 0.3s ease-in-out;
+}
+
+.like-icon:hover{
+  fill: inherit;
+  animation: hover-effect 2s ease-in-out;
+  
+@keyframes hover-effect {
+    to{
+     fill: inherit
+    }
+   
+    from{
+     fill: yellow;
+    }
+   }
+} */
+
+
+.sparks{
+  fill: aquamarine;
+}
