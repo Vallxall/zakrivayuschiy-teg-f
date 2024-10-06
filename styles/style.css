@@ -277,79 +277,8 @@ font-display: swap; чтобы загружался сначала запасн�
 
 /* сердцe */
 
-.like-icon {
-  position: relative;
+
+.contour {
+  fill: var(--accent-color);
 }
 
-.like-icon::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('heart-yellow.svg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.like-icon::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('heart-orange.svg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.like-icon:hover {
-  fill: inherit;
-  animation: hover-effect 2s ease-in-out;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-}
-
-@keyframes hover-effect {
-  0% {
-    fill: black;
-  }
-  50% {
-    fill: url(#heart-hover);
-    opacity: 1;
-  }
-  100% {
-    fill: url(#heart-senter);
-    opacity: 1;
-  }
-}
-
-/* .like-icon{
-  transition: fill 0.3s ease-in-out;
-}
-
-.like-icon:hover{
-  fill: inherit;
-  animation: hover-effect 2s ease-in-out;
-  
-@keyframes hover-effect {
-    to{
-     fill: inherit
-    }
-   
-    from{
-     fill: yellow;
-    }
-   }
-} */
-
-
-.sparks{
-  fill: aquamarine;
-}
