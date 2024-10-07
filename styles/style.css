@@ -260,12 +260,10 @@ font-display: swap; чтобы загружался сначала запасн�
   padding-inline: 19px;
   font-size: 14px;
   padding-block-end: 25px;
+  grid-auto-flow: column;
 }
 
-.card__like-button {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.button {
   border: transparent;
   background: none;
 }
@@ -278,19 +276,40 @@ font-display: swap; чтобы загружался сначала запасн�
 /* сердцe */
 
 
-.contour {
+/*  TAB like  */
+
+.card__like-button:focus-visible {
+  outline: none;
+}
+
+.card__like-button:focus-visible .like-text{
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
+/* ----------------- */
+
+/* hover сердца */
+
+.card__icon-button:hover .core {
   fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out;
 }
 
-/* центр */
-
-.core {
-  fill: #FF0000;
+.card__icon-button:not(:hover) .core {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out 0.03s;
 }
 
-
-.card__like-button:hover .main-body{
-  fill: #FF0000;
-  transition: fill 0.5s ease-in-out;
+.card__icon-button .main-body {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out;
 }
 
+.card__icon-button:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out 0.05s;
+}
+
+.card__icon-button:not(:hover) .main-body {
+  fill: transparent; 
+  transition: fill 0.3s linear; 
+}
