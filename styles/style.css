@@ -91,7 +91,7 @@ font-display: swap; чтобы загружался сначала запасн�
   margin-block-start: 25px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   font-size: 14px;
 }
 
@@ -248,7 +248,7 @@ font-display: swap; чтобы загружался сначала запасн�
   border-left: 2px solid var(--accent-color);
   border-right: 2px solid var(--accent-color);
   padding-block-start: 25px;
-  padding-block-end: 25px;
+  padding-block-end: 28px;
 } 
 
 .like-button{
@@ -257,10 +257,11 @@ font-display: swap; чтобы загружался сначала запасн�
   border-bottom: 2px solid var(--accent-color);
   display: grid;
   justify-content: end;
-  padding-inline: 19px;
+  padding-inline: 25px;
   font-size: 14px;
-  padding-block-end: 25px;
+  padding-block-end: 24px;
   grid-auto-flow: column;
+  gap: 5px;
 }
 
 .button {
@@ -285,8 +286,17 @@ font-display: swap; чтобы загружался сначала запасн�
 .card__like-button:focus-visible .like-text{
   box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
-/* ----------------- */
 
+.card__icon-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+/* ----------------- */
+.card__icon-button {
+  box-sizing: border-box;
+  height: 32px;
+}
 /* hover сердца */
 
 .card__icon-button:hover .core {
@@ -312,4 +322,69 @@ font-display: swap; чтобы загружался сначала запасн�
 .card__icon-button:not(:hover) .main-body {
   fill: transparent; 
   transition: fill 0.3s linear; 
+}
+/* ----------------- */
+
+/* Клик сердце  */
+
+.card__icon-button:active .core {
+  fill: #FF0000;
+  transition: fill 0.3s ease-in-out;
+}
+
+.card__icon-button:active .main-body {
+  fill: #FF0000;
+  transition: fill 0.3s ease-in-out 0.05s;
+}
+
+/* .......... */
+
+.like-icon.is-liked .core {
+  fill: #FF0000;
+  transition: fill 0.3s ease-in-out;
+}
+
+.like-icon.is-liked .main-body {
+  fill: #FF0000;
+  transition: fill 0.3s ease-in-out 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: #FF0000;
+  transition: fill 0.3s ease-in-out 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: scale-heart 0.3s ease-in 0.1s;
+  transform-origin: center;
+}
+
+@keyframes scale-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-icon.is-liked .sparks {
+  fill: #FF0000;
+  animation: sparks 0.3s ease-in 0.3s forwards;
+  transform-origin: center;
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
