@@ -7,7 +7,7 @@
   background-attachment: fixed;
   color: var(--accent-color);
   font-family: var(--font-family-pressstart2p);
-  font-variation-settings: var(--font-weight-main);
+  font-variation-settings: 'wght' var(--font-weight-main);
   font-size: 18px;
   font-weight: var(--normal-Weight);
 }
@@ -141,6 +141,7 @@
   font-size: 18px;
   font-family: var(--font-family-inter);
   font-weight: var(--font-weight-title);
+  font-variation-settings: 'wght' var(--font-weight-title);
   line-height: 31px;
   padding-inline-start: 10px;
   border-right: 2px solid var(--accent-color);
