@@ -7,33 +7,76 @@
 
 /* ТЁМНАЯ */
 
-:root.theme-dark{
---background-image: repeating-linear-gradient(to right, #000 0%, #000 2px, transparent 2px, transparent 4px),repeating-linear-gradient(to bottom,#000 0%,#000 2px, transparent 2px, transparent 4px), linear-gradient(to bottom,#007f0c,#004306);
---background-color: #000000;
---accent-color: #00CC14;
---font-weight-main: 465;
---font-weight-title: 785;
+:root.theme-dark {
+  --background-image: repeating-linear-gradient(
+      to right,
+      #000 0%,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007f0c, #004306);
+  --background-color: #000;
+  --accent-color: #00cc14;
+  --font-weight-main: 465;
+  --font-weight-title: 785;
+  --text-color: var(--accent-color);
 }
-
 
 /* СВЕТЛАЯ */
 
-:root.theme-light{
-  --background-image: repeating-linear-gradient(to right, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px),repeating-linear-gradient(to bottom, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(to bottom,  #e7e7e7 0.01%, #1a1a1a 100%);
-  --background-color: #FFFFFF;
-  --accent-color: #000000;
+:root.theme-light {
+  --background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0%,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0%,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --background-color: #fff;
+  --accent-color: #000;
   --font-weight-main: 400;
   --font-weight-title: 700;
+  --text-color: #fff;
 }
-
 
 @media (prefers-color-scheme: light) {
-  :root{
-  --background-image: repeating-linear-gradient(to right, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px),repeating-linear-gradient(to bottom, #d3d3d3 0%, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-  --background-color: #FFFFFF;
-  --accent-color: #000000;
-  --font-weight-main: 400;
-  --font-weight-title: 700;
+
+  :root {
+    --background-image: repeating-linear-gradient(
+        to right,
+        #d3d3d3 0%,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #d3d3d3 0%,
+        #d3d3d3 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+    --background-color: #fff;
+    --accent-color: #000;
+    --font-weight-main: 400;
+    --font-weight-title: 700;
+    --text-color: #fff;
   }
 }
-
